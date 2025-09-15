@@ -1,0 +1,15 @@
+services:
+  webrtc-cam:
+    build: .
+    container_name: webrtc-cam
+    expose:
+      - "3000"
+    restart: unless-stopped
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: webrtc-cam-tunnel
+    command: tunnel --no-autoupdate --url http://webrtc-cam:3000
+    depends_on:
+      - webrtc-cam
+    restart: unless-stopped
