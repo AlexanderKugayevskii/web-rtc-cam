@@ -27,7 +27,7 @@
 Клонируйте репозиторий:
 
 ```bash
-git clone https://github.com/you/webrtc-cam.git
+git clone git@github.com:AlexanderKugayevskii/web-rtc-cam.git
 cd webrtc-cam
 ```
 
