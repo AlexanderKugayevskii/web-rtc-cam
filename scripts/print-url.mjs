@@ -4,7 +4,7 @@ const SERVICE = process.env.CF_SERVICE || "cloudflared";
 const RX = /https:\/\/[-A-Za-z0-9.]+\.trycloudflare\.com/g;
 
 function banner(u) {
-  return `********************************************************
+  return `\n********************************************************
 Open this on your devices:
 
 PC:      ${u}/viewer

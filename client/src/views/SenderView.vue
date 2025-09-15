@@ -5,11 +5,12 @@
     <div class="flex flex-wrap items-center gap-3">
       <label class="text-sm">Камера:</label>
       <select
+        id="selectDevice"
         v-model="selectedDeviceId"
         @change="applyNewStream"
-        class="px-2 py-1 rounded border bg-neutral-900"
+        class="px-2 py-1 rounded border bg-emerald-600 text-neutral-200"
       >
-        <option :value="null">Авто (front)</option>
+        <option :value="null" class="text-white">Авто (front)</option>
         <option v-for="d in devices" :key="d.deviceId" :value="d.deviceId">
           {{ d.label || 'Камера' }}
         </option>
@@ -17,9 +18,10 @@
 
       <label class="text-sm ml-2">Качество:</label>
       <select
+        id="selectQuality"
         v-model="quality"
         @change="applyNewStream"
-        class="px-2 py-1 rounded border bg-neutral-900"
+        class="px-2 py-1 rounded border bg-emerald-600 text-neutral-200"
       >
         <option value="480p">480p</option>
         <option value="720p">720p</option>

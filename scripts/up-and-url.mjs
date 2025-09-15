@@ -12,7 +12,7 @@ function sh(cmd, args, opts = {}) {
 function banner(url) {
   const viewer = `${url}/viewer`;
   const sender = `${url}/sender`;
-  return `********************************************************
+  return `\n********************************************************
 Open this on your devices:
 
 PC:      ${viewer}
@@ -71,7 +71,7 @@ function followForUrl(timeoutMs = START_TIMEOUT_MS) {
 async function main() {
   // 1) up -d
   console.log("Starting containers…");
-  const up = sh("docker", ["compose", "up", "-d"]);
+  const up = sh("docker", ["compose", "up", "-d", "--build"]);
   if (up.status !== 0) {
     console.error(up.stderr || up.stdout || "docker compose up failed");
     process.exit(up.status || 1);
