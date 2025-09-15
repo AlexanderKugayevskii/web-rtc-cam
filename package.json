@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "up": "node scripts/up-and-url.mjs",
+    "url": "node scripts/print-url.mjs",
+    "down": "docker compose down"
+  }
+}

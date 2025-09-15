@@ -2,8 +2,8 @@ services:
   webrtc-cam:
     build: .
     container_name: webrtc-cam
-    expose:
-      - "3000"
+    ports:
+      - "3000:3000"     # ← теперь доступно по http://localhost:3000
     restart: unless-stopped
 
   cloudflared:

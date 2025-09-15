@@ -1,5 +1,5 @@
 <template>
-  <video ref="vid" autoplay playsinline muted controls class="w-full h-[80vh] object-contain bg-black"></video>
+  <video ref="vid" autoplay muted class="w-full h-[80vh] object-contain bg-black"></video>
 </template>
 
 <script setup lang="ts">
