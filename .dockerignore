@@ -1,0 +1,13 @@
+# Git/лог/OS мусор
+.git
+.gitignore
+.DS_Store
+*.log
+
+# Node modules (чтобы не копировались в build context)
+node_modules
+client/node_modules
+server/node_modules
+
+# Локальные артефакты/секреты
+certs/
